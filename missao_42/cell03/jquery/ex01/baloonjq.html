@@ -1,0 +1,105 @@
+<!--<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOM!BalOOn!pw</title>
+
+    <style>
+
+        #balao{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            margin: 50px auto;
+            transition: all 0.2s ease;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="balao"></div>
+
+    <script>
+
+        const balao = document.getElementById('balao');
+
+        let tamanhoAtual = 200;
+        let corIndex= 0;
+        const cores = ["red", "green", "blue"];
+
+        balao.addEventListener("click",function(){
+
+            tamanhoAtual += 10;
+            corIndex = (corIndex + 1) % cores.length;
+
+            if(tamanhoAtual>420){
+                tamanhoAtual = 200;
+                corIndex = 0;
+
+            }
+
+                balao.style.width = tamanhoAtual + "px";
+                balao.style.height = tamanhoAtual + "px";
+                balao.style.backgroundColor = cores[corIndex];
+        })
+
+    </script>
+
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOM!BalOOn!pw</title>
+
+    <style>
+        #balao {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            margin: 50px auto;
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="balao"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        const balao = $("#balao");
+
+        let tamanhoAtual = 200;
+        let corIndex = 0;
+        const cores = ["red", "green", "blue"];
+
+        balao.on("click", function () {
+
+            tamanhoAtual += 10;
+            corIndex = (corIndex + 1) % cores.length;
+
+            if (tamanhoAtual > 420) {
+                tamanhoAtual = 200;
+                corIndex = 0;
+            }
+
+            balao.css({
+                "width": tamanhoAtual + "px",
+                "height": tamanhoAtual + "px",
+                "background-color": cores[corIndex]
+            });
+        });
+    </script>
+
+</body>
+</html>

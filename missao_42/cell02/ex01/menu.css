@@ -1,0 +1,38 @@
+.configuracao-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botao-menu-visivel {
+    display: flex;
+    height: 50px;
+    width: 200px;
+    background-color: #FF2DA1;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.menu-opcoes {
+    list-style-type: none;
+    cursor: pointer;
+    background-color: #ff7DA1;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-opcoes li {
+    padding: 10px;
+    border-bottom:solid #FF9DA1;
+}
+
+.menu-opcoes li:hover {
+    background-color: #FF9DA1;
+}

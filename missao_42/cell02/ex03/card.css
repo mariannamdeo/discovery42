@@ -1,0 +1,32 @@
+.organizar-elementos {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    margin-bottom: 0;
+    flex-direction: column;
+   
+    
+}
+
+.organizar-elementos-tabela {
+    text-align: center;
+    width: 250px;
+    background-color: #f2f2f2
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+}
+
+.caixa {
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

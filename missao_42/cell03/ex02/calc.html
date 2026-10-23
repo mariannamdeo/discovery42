@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+</head>
+<body>
+    <form id="calculadora">
+        <input type="text" id="esquerda">
+        <select id="operador">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="direita">
+        <input type="submit" value="Try me!">
+    </form>
+
+    <script>
+        const form = document.getElementById("calculadora");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // pegar valores dos inputs
+            const textoEsquerda = document.getElementById("esquerda").value;
+            const textoDireita = document.getElementById("direita").value;
+            const operador = document.getElementById("operador").value;
+
+            // validar só inteiros >= 0
+            const ehInteiroPositivo = /^\d+$/;
+            if (!ehInteiroPositivo.test(textoEsquerda) || !ehInteiroPositivo.test(textoDireita)) {
+                alert("Error :(");
+                return;
+        };
+            //para o caso de divisão por zero
+            const a = Number(textoEsquerda);
+            const b = Number(textoDireita);
+
+            if ((operador === "/" || operador === "%") && b === 0) {
+            alert("It's over 9000!");
+            console.log("It's over 9000!");
+            return;
+            }
+
+            //para fazer a conta e mostrar o resultado
+            let resultado;
+
+            switch (operador) {
+            case "+": resultado = a + b; break;
+            case "-": resultado = a - b; break;
+            case "*": resultado = a * b; break;
+            case "/": resultado = a / b; break;
+            case "%": resultado = a % b; break;
+            }
+
+            alert(resultado);
+            console.log(resultado);
+            
+        });
+
+            //para alertar a cada 30 segundos
+            
+            setInterval(function () {
+            alert("Please, use me...");
+            }, 30000);
+        
+        
+    </script>
+</body>
+
+</html>
