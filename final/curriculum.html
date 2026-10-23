@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marianna</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <style>
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #fafafa;
+            padding-top: 70px; 
+        }
+
+        section {
+            padding: 60px 15px;
+            scroll-margin-top: 70px; 
+        }
+
+        
+        .organizar-elementos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: calc(100vh - 70px);
+        }
+
+        .organizar-elementos-tabela {
+            text-align: center;
+            width: 250px;
+            background-color: #f2f2f2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .caixa {
+            width: fit-content;
+            height: fit-content;
+            padding: 20px 10px;
+            background-color: #f2f2f2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        .minha-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1000;
+        }
+
+        .minha-navbar .logo {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .minha-navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .minha-navbar ul a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .minha-navbar ul a:hover,
+        .minha-navbar ul a.ativo {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+
+        .botao-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 26px;
+        }
+
+        
+        .foto-perfil {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        
+        .cartao {
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .skill {
+            display: inline-block;
+            background-color: #222;
+            color: #fff;
+            padding: 5px 12px;
+            margin: 4px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        
+        .icone-contato {
+            width: 40px;
+            margin: 0 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+        }
+
+        
+        @media (max-width: 768px) {
+            .botao-menu {
+                display: block;
+            }
+
+            .minha-navbar ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: #222;
+                padding: 15px 20px;
+            }
+
+            .minha-navbar ul.aberto {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="minha-navbar">
+        <a href="index.html" class="logo">← Início</a>
+        <button class="botao-menu" id="botaoMenu">☰</button>
+        <ul id="menu">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+
+    <section id="sobre" class="organizar-elementos">
+        <table class="organizar-elementos-tabela caixa">
+            <tr>
+                <td>
+                    <img src="perfil-linkedin.jpeg" alt="Foto de Perfil" class="foto-perfil">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1>Marianna Martins</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Estagiária de Tecnologia</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Em transição de carreira das artes cênicas para a tecnologia.
+                        <br> Um passo por vez! Vambora!</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    
+    <section id="experiencia">
+        <div class="container">
+            <h2 class="text-center mb-4">Experiência Profissional</h2>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="cartao">
+                        <h5>Ericsson</h5>
+                        <p class="text-muted">Estagiária de Tecnologia – PMO Governance & Planning | 2026 – atual</p>
+                        <p>Descreva aqui suas atividades.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="cartao">
+                        <h5>TIM Brasil</h5>
+                        <p class="text-muted">Estagiária – KPIs e Gestão de Dados | 2024 – 2026</p>
+                        <p>Descreva aqui suas atividades.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="cartao">
+                        <h5>Empresa</h5>
+                        <p class="text-muted">Cargo | Período</p>
+                        <p>Descreva aqui suas atividades.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="cartao">
+                        <h5>Empresa</h5>
+                        <p class="text-muted">Cargo | Período</p>
+                        <p>Descreva aqui suas atividades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container text-center">
+            <h2 class="mb-4">Skills</h2>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">Inglês</span>
+            <span class="skill">Espanhol</span>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container text-center">
+            <h2 class="mb-4">Contato</h2>
+
+            <p>
+                <a href="https://medium.com/" target="_blank">
+                    <img src="medium.png" alt="Medium" class="icone-contato">
+                </a>
+            </p>
+
+            <p>
+                <button class="btn btn-dark" onclick="window.open('https://www.linkedin.com/in/mariannamartinsdeoliveira/', '_blank')">LinkedIn</button>
+                <button class="btn btn-dark" onclick="window.open('https://github.com/', '_blank')">GitHub</button>
+                <a class="btn btn-outline-dark" href="mailto:seuemail@exemplo.com">E-mail</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Marianna Martins
+    </footer>
+</body>
+</html>
